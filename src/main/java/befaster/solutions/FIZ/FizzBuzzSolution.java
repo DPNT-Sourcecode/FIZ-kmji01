@@ -1,11 +1,13 @@
 package befaster.solutions.FIZ;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class FizzBuzzSolution {
 
-	static final String FIZZ = "fizz";
-	static final String BUZZ = "buzz";
+	static final String FIZZ = "fizz ";
+	static final String BUZZ = "buzz ";
+	static final String DELUXE = "deluxe";
 	
     public String fizzBuzz(final Integer number) {
     	final int value = number.intValue();
@@ -20,23 +22,25 @@ public class FizzBuzzSolution {
     		
     		if (isFizz){
     			sb.append(FIZZ);
-    			sb.append(' ');
     		}
     		if (isBuzz) {
     			sb.append(BUZZ);
-    			sb.append(' ');
     		}
     	}
     	
     	if (value > 10)
     	{
     		if (isDeluxe(str)) {
-    			
+    			sb.append(DELUXE);
     		}
-    			
     	}
     	
-    	return str;
+    	return sb.length() >= 4 ? sb.toString().trim() : str;
     }
+
+	private boolean isDeluxe(String str) {	
+		return Arrays.stream(str.split("")).distinct().collect(Collectors.toList()).size() <= 1;
+
+	}
 
 }
