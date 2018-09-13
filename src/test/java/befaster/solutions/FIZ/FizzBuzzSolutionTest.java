@@ -16,21 +16,25 @@ public class FizzBuzzSolutionTest {
 	@Test
 	public void testFizz() {
 		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(189)));
+		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(198)));
+		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(13)));
 	}
 	
 	@Test
 	public void testBuzz() {
 		assertEquals("buzz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(25)));
+		assertEquals("buzz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(10)));
 	}
 	
 	@Test
 	public void testFizzBuzz() {
 		assertEquals("fizz buzz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(15)));
+		assertEquals("fizz buzz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(35)));
 	}
 
 	@Test
 	public void testFizzBuzzNone() {
-		assertEquals("98", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(98)));
+		assertEquals("197", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(197)));
 	}
 
 }
