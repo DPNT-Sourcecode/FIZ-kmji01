@@ -21,6 +21,8 @@ public class FizzBuzzSolution {
     	boolean isBuzz = value%5 == 0 || str.contains("5");
     	if (value > 10 && deluxe)
     	{
+        	isFizz = value%3 == 0 && str.contains("3");
+        	isBuzz = value%5 == 0 && str.contains("5");
     		// Can only have fake on deluxe
     		if (value%2 != 0)
     		{
@@ -30,18 +32,9 @@ public class FizzBuzzSolution {
     			sb.append(DELUXE);
     		}
     	}
-    	else 
-    	{
-    		
-    	}
-    	
-    	
-
-    	
     	
     	if (isFizz || isBuzz)
     	{
-    		
     		if (isFizz){
     			sb.append(FIZZ);
     		}
@@ -49,7 +42,17 @@ public class FizzBuzzSolution {
     			sb.append(BUZZ);
     		}
     	}
-    	
+    	if (value > 10 && deluxe)
+    	{
+    		// Can only have fake on deluxe
+    		if (value%2 != 0)
+    		{
+    			sb.append(FAKE);
+    		}
+    		if (isDeluxe(str)) {
+    			sb.append(DELUXE);
+    		}
+    	}
 
     	return sb.length() >= 4 ? sb.toString().trim() : str;
     }
