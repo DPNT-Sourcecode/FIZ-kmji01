@@ -33,7 +33,7 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void testBuzzDeluxe() {
-		assertEquals("deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(555)));
+		assertEquals("buzz deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(55)));
 	}
 	
 	@Test
@@ -44,7 +44,7 @@ public class FizzBuzzSolutionTest {
 
 	@Test
 	public void testDeluxe() {
-		assertEquals("deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(444)));
+		assertEquals("deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(2222)));
 	}
 	
 	@Test
