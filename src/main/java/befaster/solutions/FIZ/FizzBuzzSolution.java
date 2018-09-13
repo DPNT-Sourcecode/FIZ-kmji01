@@ -33,7 +33,7 @@ public class FizzBuzzSolution {
     	if (value > 10 && deluxe)
     	{
     		// Can only have fake on deluxe
-    		if (value%2 == 0)
+    		if (value%2 != 0)
     		{
     			sb.append(FAKE);
     		}

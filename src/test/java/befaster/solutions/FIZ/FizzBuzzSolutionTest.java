@@ -16,7 +16,7 @@ public class FizzBuzzSolutionTest {
 	@Test
 	public void testFizz() {
 		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(189)));
-		assertEquals("fizz fake", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(198)));
+		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(198)));
 		assertEquals("fizz", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(13)));
 	}
 	
