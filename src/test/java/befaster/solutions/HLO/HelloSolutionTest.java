@@ -17,13 +17,13 @@ public class HelloSolutionTest {
 	
 	@Test
 	public void testHello() {
-		assertEquals("Hello Dave", helloSolution.hello("Dave"));
+		assertEquals("Hello, Dave!", helloSolution.hello("Dave"));
 	}
 	
 	@Test
 	public void testHelloNull() {
-		assertEquals("Hello", helloSolution.hello(null));
-		assertEquals("Hello", helloSolution.hello(""));
+		assertEquals("Hello, World!", helloSolution.hello(null));
+		assertEquals("Hello, World!", helloSolution.hello(""));
 	}
 
 }

@@ -6,9 +6,14 @@ public class HelloSolution {
     public String hello(String friendName) {
     	
     	final StringBuilder sb = new StringBuilder(HELLO_PREFIX);
-    	if (friendName == null || friendName.trim().isEmpty())
+    	if (friendName != null && !friendName.trim().isEmpty())
     	{
-    		sb.append(' ').append(friendName.trim()).append("!")).toString()
+    		sb.append(' ').append(friendName.trim()).append("!");
     	}
+    	else 
+    	{
+    		sb.append(" World!");
+    	}
+    	return sb.toString();
     }
 }
