@@ -7,23 +7,24 @@ public class FizzBuzzSolution {
 	
     public String fizzBuzz(final Integer number) {
     	final int value = number.intValue();
-    	final boolean isDivThree = value%3 == 0;
-    	final boolean isDivFive = value%5 == 0;
+    	final String str = String.valueOf(value);
+    	final boolean isFizz = value%3 == 0 || str.contains("3");
+    	final boolean isBuzz = value%5 == 0 || str.contains("5");
     	
-    	if (isDivThree || isDivFive)
+    	if (isFizz || isBuzz)
     	{
     		final StringBuilder sb = new StringBuilder(9);
-    		if (isDivThree){
+    		if (isFizz){
     			sb.append(FIZZ);
     			sb.append(' ');
     		}
-    		if (isDivFive) {
+    		if (isBuzz) {
     			sb.append(BUZZ);
     			sb.append(' ');
     		}
     		return sb.toString().trim();
     	}
-    	return String.valueOf(value);
+    	return str;
     }
 
 }
