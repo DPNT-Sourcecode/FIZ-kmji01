@@ -7,6 +7,7 @@ public class FizzBuzzSolution {
 
 	static final String FIZZ = "fizz ";
 	static final String BUZZ = "buzz ";
+	static final String FAKE = "fake ";
 	static final String DELUXE = "deluxe";
 	
     public String fizzBuzz(final Integer number) {
@@ -28,8 +29,14 @@ public class FizzBuzzSolution {
     		}
     	}
     	
-    	if (value > 10)
+    	boolean deluxe = isDeluxe(str);
+    	if (value > 10 && deluxe)
     	{
+    		// Can only have fake on deluxe
+    		if (value%2 == 0)
+    		{
+    			sb.append(FAKE);
+    		}
     		if (isDeluxe(str)) {
     			sb.append(DELUXE);
     		}
