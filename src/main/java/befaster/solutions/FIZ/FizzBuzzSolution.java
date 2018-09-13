@@ -14,22 +14,11 @@ public class FizzBuzzSolution {
     	final int value = number.intValue();
     	final String str = String.valueOf(value);
     	
-    	final boolean isFizz = value%3 == 0 && str.contains("3");
-    	final boolean isBuzz = value%5 == 0 && str.contains("5");
-    	
     	final StringBuilder sb = new StringBuilder(16);
-    	if (isFizz || isBuzz)
-    	{
-    		
-    		if (isFizz){
-    			sb.append(FIZZ);
-    		}
-    		if (isBuzz) {
-    			sb.append(BUZZ);
-    		}
-    	}
     	
     	boolean deluxe = isDeluxe(str);
+    	boolean isFizz = value%3 == 0 || str.contains("3");
+    	boolean isBuzz = value%5 == 0 || str.contains("5");
     	if (value > 10 && deluxe)
     	{
     		// Can only have fake on deluxe
@@ -41,7 +30,27 @@ public class FizzBuzzSolution {
     			sb.append(DELUXE);
     		}
     	}
+    	else 
+    	{
+    		
+    	}
     	
+    	
+
+    	
+    	
+    	if (isFizz || isBuzz)
+    	{
+    		
+    		if (isFizz){
+    			sb.append(FIZZ);
+    		}
+    		if (isBuzz) {
+    			sb.append(BUZZ);
+    		}
+    	}
+    	
+
     	return sb.length() >= 4 ? sb.toString().trim() : str;
     }
 
