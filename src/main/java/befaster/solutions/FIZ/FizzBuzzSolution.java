@@ -23,14 +23,6 @@ public class FizzBuzzSolution {
     	{
         	isFizz = value%3 == 0 && str.contains("3");
         	isBuzz = value%5 == 0 && str.contains("5");
-    		// Can only have fake on deluxe
-    		if (value%2 != 0)
-    		{
-    			sb.append(FAKE);
-    		}
-    		if (isDeluxe(str)) {
-    			sb.append(DELUXE);
-    		}
     	}
     	
     	if (isFizz || isBuzz)
