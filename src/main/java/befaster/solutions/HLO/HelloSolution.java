@@ -1,9 +1,9 @@
 package befaster.solutions.HLO;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class HelloSolution {
+	
+	static String HELLO_PREFIX  = "Hello";
     public String hello(String friendName) {
-        throw new SolutionNotImplementedException();
+        return friendName != null ? HELLO_PREFIX + " " + friendName : HELLO_PREFIX;
     }
 }
