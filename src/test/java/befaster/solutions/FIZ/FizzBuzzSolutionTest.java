@@ -22,7 +22,9 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void testFizzDeluxe() {
-		assertEquals("fizz deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(33)));
+		assertEquals("fizz fake deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(33)));
+		// Not odd
+		assertEquals("fizz fake deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(444)));
 	}
 	
 	@Test
@@ -33,7 +35,7 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void testBuzzDeluxe() {
-		assertEquals("buzz deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(55)));
+		assertEquals("buzz fake deluxe", new FizzBuzzSolution().fizzBuzz(Integer.valueOf(55)));
 	}
 	
 	@Test
